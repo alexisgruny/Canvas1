@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8" />
+  <title>canvas</title>
+</head>
+<body>
+  <canvas id="mon_canvas" width="350" height="350">
+  </canvas>
+  <script>
+  var c = document.getElementById("mon_canvas");
+  var ctx = c.getContext("2d");
+  // mur
+  ctx.beginPath();
+  ctx.moveTo(0,75);
+  ctx.lineTo(0,350);
+  ctx.lineTo(350,350);
+  ctx.lineTo(350,75);
+  ctx.closePath();
+  ctx.fillStyle = "lightblue";
+  ctx.fill();
+  // fenetre1
+  ctx.beginPath();
+  ctx.moveTo(75,100);
+  ctx.lineTo(75,150);
+  ctx.lineTo(25,150);
+  ctx.lineTo(25,100);
+  ctx.closePath();
+  ctx.fillStyle = "grey";
+  ctx.fill();
+  // fenetre2
+  ctx.beginPath();
+  ctx.moveTo(325,100);
+  ctx.lineTo(275,100);
+  ctx.lineTo(275,150);
+  ctx.lineTo(325,150);
+  ctx.closePath();
+  ctx.fillStyle = "grey";
+  ctx.fill();
+  // porte
+  ctx.beginPath();
+  ctx.moveTo(150,275);
+  ctx.lineTo(150,350);
+  ctx.lineTo(200,350);
+  ctx.lineTo(200,275);
+  ctx.closePath();
+  ctx.fillStyle = "grey";
+  ctx.fill();
+  // toit
+  ctx.beginPath();
+  ctx.moveTo(0,75);
+  ctx.lineTo(350,75);
+  ctx.lineTo(175,0);
+  ctx.closePath();
+  ctx.fillStyle = "brown";
+  ctx.fill();
+</script>
+</body>
+</html>

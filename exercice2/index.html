@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8" />
+  <title>canvas</title>
+</head>
+<body>
+  <canvas id="mon_canvas" width="400" height="400">
+  </canvas>
+  <script>
+  var c = document.getElementById("mon_canvas");
+  var ctx = c.getContext("2d");
+  ctx.rotate(45 * Math.PI / 180);
+  ctx.fillStyle = "brown";
+  ctx.fillRect(176,-106,141,141);
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+  // mur
+  ctx.fillStyle = "#A4D7E7";
+  ctx.fillRect(100,150,200,200);
+  //fenetre porte
+  ctx.fillStyle = "grey";
+  ctx.fillRect(175,275, 50,75);
+  ctx.fillRect(125,175,50,50);
+  ctx.fillRect(225,175,50,50);
+
+</script>
+</body>
+</html>
